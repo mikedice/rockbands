@@ -1,0 +1,274 @@
+/*
+    Site CSS
+    copyright 2014, mikedice417@hotmail.com
+*/
+
+/* Large screen styles */
+@media all and (min-width: 1000px) {
+   body
+   {
+        font-family: arial;
+   }
+    #content-pane {
+        margin: 20px;
+        background-color: grey;
+        min-width: 1024px;
+        height: 740px;
+        background-color: black;
+    }
+    
+    #title-banner {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    #title-banner-image{
+        background-image: url("../images/Banner-large.png");
+        background-repeat: no-repeat;
+        background-color: black;
+        height: 100px;
+    }
+    
+    #title-banner-menu{
+        list-style-type: none;
+        padding: 0px;
+        margin: 0px;
+        padding-left: 20px;
+    }
+    
+    #title-banner-menu li{
+        display: inline;
+    }
+    
+    #title-banner-menu li a{
+        padding-right: 10px;
+        text-decoration: none;
+    }
+
+    #title-banner-menu li a:visited, a:link, a:active{
+        padding-right: 10px;
+        text-decoration: none;
+        color: purple;
+    }
+    
+    #title-banner-menu li a:hover{
+        padding-right: 10px;
+        text-decoration: none;
+        color: lightgrey;
+    }
+    
+    #blog-feed {
+        background-color:green;
+        float: left;
+        width: 20%;
+        height: 100px;
+        display: none;
+    }
+    
+    #gallery-list {
+        background-color:black;
+        float: left;
+        width: 20%;
+        height: 600px;
+    }
+
+    #gallery-menu {
+        padding-left:10px;
+        padding-top: 10px;
+        margin: 0px;
+        width: 100%;
+        list-style: none;
+    }
+    
+    #gallery-menu-link {
+        text-decoration: none;
+        font-size: 24px;
+    }
+    
+    #gallery-list-anchor{
+        display: block;
+        width: 80%;
+        
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 8px;
+        padding-left: 6px;
+        margin-left: 5px;
+        background-image: url("../images/smoke.png");
+        text-decoration: none;
+    }
+    
+    #gallery-list-anchor:visited, #gallery-list-anchor:active, #gallery-list-anchor:link{
+        color: purple;
+        border-color: black;
+    }
+    
+    #gallery-list-anchor:hover{
+        color: purple;
+        border-color: blue;
+    }
+
+    #footer {
+        background-image: url("../images/Footer.png");
+        clear: both;
+        width: 100%;
+        height: 40px;
+    }
+
+    #splash-screen {
+        background-color:black;
+        float: left;
+        width: 80%;
+        height: 600px;
+    }
+    
+    #photo-gallery {
+        height: 600px;
+        width: 100%;
+    }
+    
+    #rotator {
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+        height: 580px;
+    }
+    
+    #rotator_wrapper
+    {
+        height: 580px;
+    }
+    
+    #rotator-controls
+    {
+        vertical-align: bottom;
+    }
+    
+    .rotator-image-item{
+        max-height: 580px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        
+    }
+}
+
+
+/* Small screen styles */
+@media all and (max-width: 999px) {
+   
+    #content-pane {
+        padding: 20px;
+        background-color: grey;
+        min-width: 640px;
+        height: 1300px;
+        background-color: black;
+    }
+    
+    #title-banner {
+        height: 100px;
+        background-color: black;
+    }
+
+    #title-banner-image{
+        background-image: url("../images/Banner-small.png");
+        background-repeat: no-repeat;
+        background-color: black;
+        margin-left: 100px;
+        height: 100px;
+        vertical-align: top;
+    }
+    
+    #splash-screen {
+        background-color: black;
+        height: 580px;
+    }
+    #blog-feed {
+        background-color:green;
+        height: 100px;
+        display: none;
+    }
+    
+    #gallery-list {
+        background-color:yellow;
+        height: 100px;
+    }
+    
+    #gallery-menu {
+        padding-left: 20px;
+        padding-top: 20px;
+        margin: 0px;
+        width: 100%;
+        list-style: none;
+    }
+    
+     #gallery-list {
+        background-color:black;
+        float: left;
+        width: 20%;
+        height: 100px;
+    }
+
+    #gallery-menu {
+        padding-left:10px;
+        padding-top: 10px;
+        margin: 0px;
+        width: 100%;
+        list-style: none;
+    }
+    
+    #gallery-menu-link {
+        text-decoration: none;
+        font-size: 24px;
+    }
+    
+    #gallery-list-anchor{
+        display: block;
+        width: 80%;
+        border-color: black;
+        border-width: 1px;
+        border-style: solid;
+        border-radius: 8px;
+        padding-left: 6px;
+        margin-left: 5px;
+        background-image: url("../images/smoke.png");
+        text-decoration: none;
+    }
+    
+    #gallery-list-anchor:visited{
+        color: purple;
+    }
+    
+    #gallery-list-anchor:link{
+        color: purple;
+    }
+    #gallery-list-anchor:hover{
+        color: purple;
+    }
+    #gallery-list-anchor:active{
+        color: purple;
+    }
+   
+    #footer {
+        background-image: url("../images/Footer.png");
+        clear: both;
+        width: 100%;
+        height: 40px;
+    }
+    
+    #rotator{
+        list-style: none;
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .rotator-image-item{
+        max-height: 580px;
+        max-width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+   }
+
+}
