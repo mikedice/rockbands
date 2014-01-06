@@ -1,0 +1,41 @@
+/*
+slides.css
+copyright 2014, mikedice417@hotmail.com
+*/
+
+#slider {
+    height:650px;
+    width:750px;
+
+}
+
+#slider ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    overflow: hidden;
+    border: 1px solid grey;
+    position: relative;
+    padding: 0px;
+}
+
+#slider ul li {
+    position: absolute;
+    left: 750px;
+}
+
+#slider li{
+    background-color: #000000;
+}
+
+#slider ul li:first-child {
+    left: 0px;
+}
+
+#slider img
+{
+    height:auto;
+    width:auto;
+    max-width:750px;
+    max-height: 650px;
+}
