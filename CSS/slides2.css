@@ -1,0 +1,32 @@
+/*
+slides2.css
+copyright 2014, mikedice417@hotmail.com
+*/
+
+#slides-container {
+    width: 750px;
+    
+    border-width: 1px;
+    border-color: black;
+    
+    /*these properties are changed in script*/
+    overflow: auto;
+    height: 671px;
+}
+
+#slides-window {
+    width: 10000px;
+    height: 100%;
+    margin-left: 0px; /*will be manipulated in script to slide pictures*/
+}
+
+.slideElement {
+    float:left;
+    background-color: grey;
+    height: 100%;
+}
+
+.slide-image {
+    max-height: 650px;
+    max-width: 750px;
+}
