@@ -59,6 +59,7 @@ var Slider = (function(){
                     .addClass("slideElement")
                     .append($("<img>")
                                 .addClass("slide-image")
+                                .load(function(e){ Slider.ComputePadding(e.target);})
                                 .attr("src", galleryList[i].ImageUrl))
                     .appendTo($("#slides-window"));
             }
@@ -66,7 +67,7 @@ var Slider = (function(){
             // compute padding for all the loaded images so they are centered in their
             // container using padding. The padding color will be set to the background 
             // color of the slidesElement
-            $(".slideElement").each(function (i, e) { Slider.ComputePadding(e); });
+            // $(".slideElement").each(function (i, e) { Slider.ComputePadding(e); });
 
             // handler for the left and right buttons
             $("#slideRight").click(function () { SlideImage("right"); });
@@ -74,8 +75,10 @@ var Slider = (function(){
         },
         ComputePadding: function (e)
         {
-            var w = $(e).children("img").first().width();
-            var h = $(e).children("img").first().height();
+            //var w = $(e).children("img").first().width();
+            //var h = $(e).children("img").first().height();
+            var w = $(e).width();
+            var h = $(e).height();
 
             // compute padding to center vertically
             if (h < boxHeightInPx)
@@ -115,9 +118,9 @@ var Slider = (function(){
 
 $(document).ready(function(){
 
-    // var galleryJsonUrl = "images/Studio7/gallerymetadata.json";
+    var galleryJsonUrl = "images/Studio7/gallerymetadata.json";
     // var galleryJsonUrl = "images/Random/gallerymetadata.json";
-    var galleryJsonUrl = "images/NonConcert/gallerymetadata.json";
+    // var galleryJsonUrl = "images/NonConcert/gallerymetadata.json";
     
     
     // download gallery JSON

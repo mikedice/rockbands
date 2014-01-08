@@ -23,10 +23,12 @@ copyright 2014, mikedice417@hotmail.com
 .slideElement {
     float:left;
     background-color: grey;
-    height: 100%;
+    height: 650px;
+    width: 750px;
 }
 
 .slide-image {
     max-height: 650px;
     max-width: 750px;
 }
+
