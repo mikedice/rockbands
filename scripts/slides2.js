@@ -8,7 +8,10 @@ var Slider = (function(){
         transitionTimeInMs = 500,
         boxHeightInPx = 650,
         boxWidthInPx = 750,
-        imageCount = 0;
+        controlHeightInPx = 20,
+        imageCount = 0,
+        currentIndex = 1;
+        
    
    function SlideImage(direction)
    {
@@ -21,29 +24,50 @@ var Slider = (function(){
                return;
            }
            offset = -1 * boxWidthInPx;
+           currentIndex++;
        }
        else if (direction == "left") {
            if (currentOffset == 0) {
                return;
            }
            offset = boxWidthInPx;
+           currentIndex--;
        }
 
        leftNew = leftCurrent + offset;
        currentOffset += offset;
         // animate images to slide them in position.
         $("#slides-window").animate({'margin-left': leftNew+"px"}, transitionTimeInMs, "linear", function(){});
+        
+        UpdateImageCountLabel();
+   }
+   
+   function UpdateImageCountLabel()
+   {
+        $("#slider-current-count").empty();
+        $("#slider-current-count").html(currentIndex + " of " + imageCount);
    }
    
     // public interface
     return {
         Initialize: function (galleryList) {
 
+            // reset offsets used by the slider and get ready to display the slider
+            currentOffset = 0;
+            imageCount = 0;
+            currentIndex = 1;
+            $("#slides-window").css({'margin-left':'0px'});
+            $("#slider-slide-right").unbind("click"); // to ugly to check for existing handler so just unbind...
+            $("#slider-slide-left").unbind("click");
+            
+            // first clear all children, if there are any
+            $("#slides-window").empty();
+            
             // since script is running we can disable styles the 'no javascript' styles
             $("#slides-container").css(
                 {
                     overflow: 'hidden',
-                    height: boxHeightInPx + "px"
+                    height: boxHeightInPx + controlHeightInPx + "px"
                 });
 
             // load all images
@@ -70,8 +94,10 @@ var Slider = (function(){
             // $(".slideElement").each(function (i, e) { Slider.ComputePadding(e); });
 
             // handler for the left and right buttons
-            $("#slideRight").click(function () { SlideImage("right"); });
-            $("#slideLeft").click(function () { SlideImage("left"); });
+            $("#slider-slide-right").click(function () { SlideImage("right"); });
+            $("#slider-slide-left").click(function () { SlideImage("left"); });
+            
+            UpdateImageCountLabel();
         },
         ComputePadding: function (e)
         {
@@ -118,20 +144,20 @@ var Slider = (function(){
 
 $(document).ready(function(){
 
-    var galleryJsonUrl = "images/Studio7/gallerymetadata.json";
+    // var galleryJsonUrl = "images/Studio7/gallerymetadata.json";
     // var galleryJsonUrl = "images/Random/gallerymetadata.json";
     // var galleryJsonUrl = "images/NonConcert/gallerymetadata.json";
     
     
     // download gallery JSON
-    $.getJSON(galleryJsonUrl)
-        .done(function(result){
+    //$.getJSON(galleryJsonUrl)
+    //    .done(function(result){
 
-        Slider.Initialize(result.GalleryEntries)
+    //    Slider.Initialize(result.GalleryEntries)
 
-    }).error(function(result){
+    //}).error(function(result){
         // todo: handle error            
-    });
+    //});
   
 
 });

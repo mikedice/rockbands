@@ -13,7 +13,6 @@
         margin: 20px;
         background-color: grey;
         min-width: 1024px;
-        height: 740px;
         background-color: black;
     }
     
@@ -57,19 +56,19 @@
         color: lightgrey;
     }
     
-    #blog-feed {
+    #blog-feed-container {
         background-color:green;
         float: left;
         width: 20%;
-        height: 100px;
-        display: none;
+        height: 650px;
+        clear: both;
+        color: purple;
     }
     
     #gallery-list {
         background-color:black;
         float: left;
         width: 20%;
-        height: 600px;
     }
 
     #gallery-menu {
@@ -119,7 +118,6 @@
         background-color:black;
         float: left;
         width: 80%;
-        height: 600px;
     }
     
     #photo-gallery {
@@ -152,6 +150,17 @@
         display: block;
         
     }
+    
+    .thumbnail-anchor
+    {
+      float:left;
+    }
+    
+    #slides-container
+    {
+      display: none;
+    }
+  
 }
 
 

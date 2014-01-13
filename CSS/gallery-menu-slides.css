@@ -1,0 +1,166 @@
+/*
+slides2.css
+copyright 2014, mikedice417@hotmail.com
+*/
+
+#gallery-menu {
+    width: 400px;
+    margin-left: 300px;
+    
+}
+#gallery-menu-slides-container {
+    width: 300px;
+    height: 60px;    
+    border-width: 1px;
+    border-color: black;
+    
+    /*these properties are changed in script*/
+    overflow: auto;
+    float:left;
+}
+
+#gallery-menu-slides-window {
+    width: 10000px;
+    height: 100%;
+    margin-left: 0px; /*will be manipulated in script to slide pictures*/
+}
+
+
+#gallery-menu-slideLeft
+{
+    float: left;
+}
+
+#gallery-menu-slideRight
+{
+    float: left;
+}
+
+.gallery-menu-slideElement {
+    float:left;
+    background-color: grey;
+    height: 60px;
+    width: 300px;
+    border-radius: 20px;
+    background-image: url('../images/smoke.png');
+}
+
+.gallery-menu-item-title
+{
+    padding: 10px;
+    text-align: center;
+    white-space:nowrap; 
+    width:260px;
+    max-width:260px; 
+    overflow:hidden; 
+
+    text-overflow:ellipsis;
+    color: red;
+     text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
+/* 'Gallery' link */
+.gallery-menu-item-gallery-link
+{
+    color: red;
+     text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    padding: 10px;
+    padding-left: 70px;
+}
+
+.gallery-menu-item-gallery-link:link, visited, active
+{
+    color: red;
+     text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
+.gallery-menu-item-gallery-link:hover
+{
+    color: blue;
+     text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    cursor: pointer;
+}
+
+/* 'Thumbnails link */
+.gallery-menu-item-thumbs-link
+{
+    color: red;
+     text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    padding: 10px;
+    display: none;
+}
+
+.gallery-menu-item-thumbs-link:link, visited, active
+{
+    color: red;
+     text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;  
+}
+
+.gallery-menu-item-thumbs-link:hover
+{
+    color: blue;
+     text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+    cursor: pointer;
+}
+
+/* left and right buttons */
+#gallery-menu-slideLeft
+{
+    display: inline;
+    padding-right: 15px;
+    padding-top: 15px;
+    color: white;
+    max-width: 30px;
+    width: 30px
+}
+
+#gallery-menu-slideRight
+{
+    display:inline;
+    display: inline;
+    padding-left: 15px;
+    padding-top: 15px;
+    color: white;
+    max-width: 30px;
+    width: 30px
+
+}
+
+#gallery-menu-slideRight a:hover
+{
+    cursor: pointer;
+    color: gray;
+}
+#gallery-menu-slideLeft a:hover
+{
+    cursor: pointer;
+    color: gray;
+}

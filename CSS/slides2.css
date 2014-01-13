@@ -11,18 +11,59 @@ copyright 2014, mikedice417@hotmail.com
     
     /*these properties are changed in script*/
     overflow: auto;
-    height: 671px;
+    height: 670px;
 }
 
 #slides-window {
     width: 10000px;
-    height: 100%;
+    height: 650px;
     margin-left: 0px; /*will be manipulated in script to slide pictures*/
+}
+
+#slides-controls
+{
+    color: white;
+    height: 20px;
+    color: white;
+    padding-left: 280px;
+}
+
+#slider-slide-left
+{
+    float:left;
+    width: 30px;
+    max-width: 30px;
+}
+
+#slider-slide-left a:hover
+{
+    cursor: pointer;
+    color: gray;
+}
+
+#slider-slide-right
+{
+    float:left;
+    width: 30px;
+    max-width: 30px;
+}
+
+#slider-slide-right a:hover
+{
+    cursor: pointer;
+    color: gray;
+}
+
+#slider-current-count
+{
+    float:left;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .slideElement {
     float:left;
-    background-color: grey;
+    background-color: black;
     height: 650px;
     width: 750px;
 }
@@ -31,4 +72,5 @@ copyright 2014, mikedice417@hotmail.com
     max-height: 650px;
     max-width: 750px;
 }
+
 

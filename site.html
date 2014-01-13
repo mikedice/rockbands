@@ -4,14 +4,18 @@
 <head>
     <title>site</title>
     <link rel="stylesheet" type="text/css" href="CSS/site.css">
+    <link rel="stylesheet" type="text/css" href="CSS/slides2.css">
+    <link rel="stylesheet" type="text/css" href="CSS/gallery-menu-slides.css">
 </head>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="scripts/slides2.js"></script>
+    <script src="scripts/gallery-menu-slides.js"></script>
     <script src="scripts/Site/sitecontroller.js"></script>
-    <script src="scripts/Site/sitemodel.js"></script>
     <script src="scripts/Site/siteview.js"></script>
     <script src="scripts/Gallery/galleryview.js"></script>
 <body>
     <div id="content-pane">
+
         <div id="title-banner">
             <div id="title-banner-image"></div>
             <ul id="title-banner-menu">
@@ -19,11 +23,32 @@
                 <li><a onclick="SiteController.ContactUsLinkClicked()" href="#">Contact</a></li>
             </ul>
         </div>
-        <div id="blog-feed">Blog feed</div>
-        <div id="splash-screen"><img src="images/RockBands-home.png" /></div>
-        <div id="gallery-list">
-            <ul id="gallery-menu"></ul>
+        
+
+        <div id="gallery-menu">
+            <div id="gallery-menu-slideLeft"><a><<<</a></div>
+            <div id="gallery-menu-slides-container">
+                <div id="gallery-menu-slides-window"></div>
+            </div>
+            <div id="gallery-menu-slideRight"><a>>>></a></div>
+        </div>        
+
+        <div id="blog-feed-container">
+
         </div>
+        
+        <!-- On initial load splash-screen is visible and slides-container is hidden -->
+        <div id="splash-screen"><img src="images/RockBands-home.png" /></div>
+        <div id="slides-container">
+            <div id="slides-window"></div>
+            <div id="slides-controls">
+                <div id="slider-slide-left"><a><<<</a></div>
+                <div id="slider-current-count"></div>
+                <div id="slider-slide-right"><a>>>></a></div>
+            </div>
+        </div>
+        
+        
         <div id="footer"></div>
     </div>
 </body>

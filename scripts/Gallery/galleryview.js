@@ -75,6 +75,53 @@ var GalleryView = (function(){
 
                 rotate($('#rotator li:visible:first'));
             }
+        },
+
+        InitializeThumbnails: function(galleryImageList)
+        {
+            // could be zero or more rows of three
+            for (var i=0; i<galleryImageList.GalleryEntries.length; i++) {
+                $anchor = $("<a>")
+                    .addClass("thumbnail-anchor")
+                    .attr
+
+                var startGalleryCommand = "GalleryView.StartGallery('" + galleryImageList.GalleryEntries[i].ImageUrl +"')";;
+
+                $img = $("<img>")
+                    .attr("src", galleryImageList.GalleryEntries[i].ThumbnailUrl)
+                    .attr("onClick", startGalleryCommand);
+
+                $anchor.append($img);
+                $("#thumbnails-container").append($anchor);
+            }
+        },
+
+        
+        InitializeThumbnailsOld: function(galleryImageList)
+        {
+            // rows of three
+            var rowsOf3 = galleryImageList.GalleryEntries.length / 3;
+            var remainderRow = galleryImageList.GalleryEntries.length % 3;
+            var imageListIndex = 0;
+            
+            // could be zero or more rows of three
+            for (var i=0; i<rowsOf3; i++) {
+                var row = $("<tr>")
+                    .addClass("thumbnail-table-row");
+                    
+                for (var n=0; n<3; n++)
+                {
+                    var cell = $("<td>")
+                        .addClass("thumbnail-table-cell");
+                    
+                    cell.append("<img>")
+                        .find("img")
+                        .attr("src", galleryImageList.GalleryEntries[imageListIndex++].ThumbnailUrl);
+                    row.append(cell);
+                }
+                row.appendTo("#thumbs-table");
+            }
+            
         }
     };
 }());
